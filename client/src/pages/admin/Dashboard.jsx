@@ -32,7 +32,7 @@ export default function Dashboard() {
       <Grid container spacing={2} sx={{ mb: 3 }}>
         {[
           ['Total Users', k.total_users], ['Total Products', k.total_products], ['Total Orders', k.total_orders],
-          ['Total Revenue (delivered)', money(k.total_revenue)], ['Pending Orders', k.pending_orders, 'warning.main'], ['Low Stock Products', k.low_stock_products, 'error.main'],
+          ['Total Revenue', money(k.total_revenue)], ['Pending Orders', k.pending_orders, 'warning.main'], ['Low Stock Products', k.low_stock_products, 'error.main'],
         ].map(([l, v, c]) => <Grid item xs={6} md={2} key={l}><Kpi label={l} value={v} color={c} /></Grid>)}
       </Grid>
 
